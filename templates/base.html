@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}SimpleWebHTML{% endblock %}</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="logo">
+                                <h2><a href="/">Classic</a></h2>
+                            </div>
+                        </div>
+                        <div class="col-md-10"></div>
+                    </div>
+                </div>
+            </header>
+
+            {% block content %}
+            <h1>Contentt</h1>
+            {% endblock content %}
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12"></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
