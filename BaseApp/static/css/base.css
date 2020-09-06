@@ -100,6 +100,15 @@ main {
     transition: var(--transition-speed);
 }
 
+.svg-inline--fa {
+    transform: rotate(0deg);
+    transition: 800ms;
+}
+
+.nav-link:hover .svg-inline--fa {
+    transform: rotate(-360deg);
+}
+
 .logo {
     font-weight: bold;
     text-transform: uppercase;

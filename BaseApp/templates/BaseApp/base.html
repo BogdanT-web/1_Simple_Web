@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{% block title %}SimpleWebHTML{% endblock %}</title>
+        <title>{% block title %}SimpleWebBaseApp{% endblock %}</title>
 
         <link
             rel="stylesheet"
@@ -19,7 +19,6 @@
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="{% static 'css/SelectResist.css' %}" />
         <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     </head>
 
@@ -27,7 +26,7 @@
         <nav class="navbar">
             <ul class="navbar-nav">
                 <li class="logo">
-                    <a href="#" class="nav-link">
+                    <a href="{% url 'home' %}" class="nav-link">
                         <span class="link-text logo-text">SimpleWeb</span>
                         <svg
                             aria-hidden="true"
@@ -52,6 +51,35 @@
                                 ></path>
                             </g>
                         </svg>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'HomeSelectResist' %}" class="nav-link">
+                        <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fad"
+                            data-icon="omega"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            class="svg-inline--fa fa-omega fa-w-16 fa-9x"
+                        >
+                            <g class="fa-group">
+                                <path
+                                    fill="currentColor"
+                                    d="M512 440v48a24 24 0 0 1-24 24H352a32 32 0 0 1-32-32v-42.92a57.66 57.66 0 0 1 4-21.08h164a24 24 0 0 1 24 24zM24 416a24 24 0 0 0-24 24v48a24 24 0 0 0 24 24h136a32 32 0 0 0 32-32v-42.7a56.91 56.91 0 0 0-4.15-21.3z"
+                                    class="fa-secondary"
+                                ></path>
+                                <path
+                                    fill="currentColor"
+                                    d="M56.61 416A254 254 0 0 1 0 256C0 104.82 131.74-16.18 286.45 1.77 399.19 14.85 492.12 104.36 509 216.6c11.41 75.72-10.75 146.23-53.64 199.4H324a63 63 0 0 1 22.92-28.62A159.66 159.66 0 0 0 416 256c0-99.51-91.32-178.1-194.56-156.36-62.49 13.16-112.1 65.08-123 128-11.3 65.36 17.46 125.15 65.68 159.07A66.53 66.53 0 0 1 187.85 416H56.61z"
+                                    class="fa-primary"
+                                ></path>
+                            </g>
+                        </svg>
+                        <span class="link-text">SelectResist</span>
                     </a>
                 </li>
 
@@ -255,10 +283,10 @@
         </nav>
 
         <main>
-            <h1>CSS is Cool</h1>
             {% block content %}
-            <h1>Contentt</h1>
-            {% endblock content %}
+            <h1>CSS is Cool</h1>
+
+            <h1>BaseApp</h1>
 
             <p>
                 I'm baby kale chips affogato ennui lumbersexual, williamsburg
@@ -293,6 +321,7 @@
                 Dreamcatcher lomo literally 90's before they sold out, 3 wolf
                 moon banh mi seitan chambray cliche offal tote bag occupy pug.
             </p>
+            {% endblock content %}
         </main>
 
         <script src="{% static 'js/base.js' %}"></script>

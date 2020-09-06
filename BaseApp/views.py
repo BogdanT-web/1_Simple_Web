@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import Calc
+from .models import SiteTime
 
 
-class HomeSelectResist(ListView):
-    model = Calc
-    template_name = 'SelectResist/index.html'
-    context_object_name = 'posts'
+class Home(ListView):
+    model = SiteTime
+    template_name = 'BaseApp/base.html'
+    context_object_name = 'SiteTime'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)

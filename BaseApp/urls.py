@@ -4,5 +4,5 @@ from .views import *
 
 
 urlpatterns = [
-    path('', HomeSelectResist.as_view(), name='HomeSelectResist'),
+    path('', Home.as_view(), name='home'),
 ]
