@@ -37,6 +37,7 @@ main {
     background-color: var(--bg-primary);
     transition: width 400ms ease;
     padding: 0;
+    z-index: 1;
 }
 
 .navbar-nav {
@@ -135,6 +136,7 @@ main {
 
 .navbar:hover .logo svg {
     transform: rotate(-180deg);
+
 }
 
 /* Small screens */
@@ -144,6 +146,7 @@ main {
         width: 100vw;
         height: 5rem;
         overflow: scroll;
+
     }
 
     .logo {
@@ -170,6 +173,7 @@ main {
         top: 0;
         width: 5rem;
         height: 100vh;
+
     }
 
     .navbar:hover {

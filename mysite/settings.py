@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BaseApp',
+    'WeatherApp',
     'SelectResist',
 ]
 
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'BaseApp\\templates\BaseApp')],
+        'DIRS': [os.path.join(BASE_DIR, 'BaseApp/templates/BaseApp')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
