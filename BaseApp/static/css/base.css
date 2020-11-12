@@ -37,7 +37,7 @@ main {
     background-color: var(--bg-primary);
     transition: width 400ms ease;
     padding: 0;
-    z-index: 2;
+    z-index: 1;
 }
 
 .navbar-nav {
